@@ -54,7 +54,7 @@ public class PruebaPrincipal {
             try {
                 menu = scan.nextInt();
             } catch (InputMismatchException e) {
-                System.out.println("Invalid input. Please enter a number.");
+                System.out.println("Invalid input. Please enter a integer number.");
                 scan.nextLine();
                 continue;
             }
