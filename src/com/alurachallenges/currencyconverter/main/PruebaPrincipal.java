@@ -12,7 +12,7 @@ import java.util.Scanner;
 public class PruebaPrincipal {
 
     private static final Scanner scan = new Scanner(System.in);
-    private static final GetCurrency dolar = new GetCurrency();
+    private static final GetCurrency currency = new GetCurrency();
 
     private static final Map<Integer, String> conversionMap = new HashMap<>();
 
@@ -72,7 +72,7 @@ public class PruebaPrincipal {
 
     private static void handleConversion(int menu) {
         String currencyPair = conversionMap.get(menu);
-        ExchangeRateCurrency cash = dolar.findCurrency(currencyPair);
+        ExchangeRateCurrency cash = currency.findCurrency(currencyPair);
         Converter converter = new Converter(cash);
 
         System.out.printf("Enter the amount to exchange (%s): ", currencyPair);
